@@ -3,13 +3,13 @@
 
 ## Intro
 
-- This repo contains the demo webpage used in the <span style="background-color:#121212; color: goldenrod">Manchester Codes</span><span style="background-color:#121212; color: lightskyblue"> DOM Manipulation</span> lecture on 22/03/22.
-- You can run this page locally by cloning the repo, opening it in VSCode, right-clicking on the `index.html` file and choosing *Open in Default Browser*.
+- This repo contains the demo webpage used in the <span style="background-color:#121212; color: goldenrod">Manchester Codes</span><span style="background-color:#121212; color: lightskyblue"> DOM Manipulation</span> lecture.
+- You can run this page locally by cloning the repo, opening it in VSCode, right-clicking on the `index.html` file and choosing *Open in Default Browser*. Alternatively install & use the *Live Server* VSCode extension.
 
 <br/>
 
 ## Exercises
-- The exercises we performed during the session are explained below.
+- During the lecture a variety of DOM Manipulation exercises were performed. These are explained below.
 - The first five exercises were performed using the console in Chrome Dev Tools.
 - The sixth exercise was performed by updating the code in this repo. These changes have been kept and can be viewed in `index.html` & `index.js`.
 
@@ -36,7 +36,7 @@ boxOne.style.backgroundImage="url(https://images.unsplash.com/photo-161600031567
 ## 2. Selecting Elements by Class
 - Many elements can share the same class
 - Useful for selecting multiple elements at once
-- The selected elements are stored as a <span style="color:coral">HTML Collection</span>. This is similar to an array (for our purposes), but it doesn't have the same methods that an array has (Map, ForEach etc).
+- The selected elements are stored as a <span style="color:coral">[HTML Collection](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection)</span>. This is similar to an array (for our purposes), but it doesn't have the same methods that an array has (Map, ForEach etc).
 - To change all of the elements we've selected at once we can **iterate through them** using a **for loop**
  
 ```
@@ -130,13 +130,13 @@ boxesContainer.lastChild.remove();
 
 ## 5. Event Listeners
 
-- Giving an event listener to a node makes it **execute a function** When that **event** occurs to the node.
-- Events include clicking and hovering.
+- Adding an event listener to a node makes it **execute a function** when that **event** occurs to the node.
+- Events include clicking and hovering ('mouseover').
 - The function can be anything you want.
 - The function can include a DOM manipulation, so that the event causes a change in the webpage. This makes the webpage **interactive**.
 
-- We add an eventl istener with **addEventListener**. This method takes two arguments:
-  1. An **event type**, eg. 'click', 'hover'
+- We add an event listener with the method **addEventListener**. This method takes two arguments:
+  1. An **event type**, eg. 'click', 'mouseover'
   2. A **function** to execute when the event occurs. This **must** be given the argument `method` for it to be fired when the event occurs, as in the example below.
 - If you want the event listener to do something complex, it may be sensible to write the function outside of the event listener then pass it in.
 
